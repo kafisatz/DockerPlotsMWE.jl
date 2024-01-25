@@ -31,6 +31,5 @@ fi
 
   echo_title "BUILDING & STARTING CONTAINER"  
   
-  docker build . -t $tag
+docker build . -t $tag
   
-  docker run -e "DISPLAY=$DISPLAY" -v "$HOME/.Xauthority:/root/.Xauthority:ro" -d --restart unless-stopped -t --name $tag $tag

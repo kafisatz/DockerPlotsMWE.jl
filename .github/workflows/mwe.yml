@@ -18,7 +18,8 @@ jobs:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4  
       - name: Make the script files executable
-        run: chmod +x build_and_run_mwe.sh
+        run: chmod +x docker_build.sh docker_run.sh
       - name: Run the scripts
         run: |
-          ./build_and_run_mwe.sh          
+          ./docker_build.sh
+          ./docker_run.sh
