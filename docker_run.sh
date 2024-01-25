@@ -13,5 +13,5 @@ set -e;
 pushd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" > /dev/null
 
 tag=$(cat Dockerfile | grep -oP 'cicd="\K\w+' | tail -1)
-echo_title tag=$tag
+echo tag=$tag
 docker run -e "DISPLAY=$DISPLAY" -v "$HOME/.Xauthority:/root/.Xauthority:ro" -d --restart unless-stopped -t --name $tag $tag
