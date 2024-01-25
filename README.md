@@ -1,3 +1,3 @@
 # DockerPlotsMWE
 
-[![Build Status](https://github.com/kafisatz/DockerPlotsMWE.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/kafisatz/DockerPlotsMWE.jl/actions/workflows/CI.yml?query=branch%3Amaster)
+MWE to test Plots.jl in Docker container (including Python functions via PyCall)
