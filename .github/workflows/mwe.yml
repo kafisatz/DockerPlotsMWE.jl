@@ -7,7 +7,7 @@ on:
     pull_request:
     workflow_dispatch:
 jobs:
-  old-not-relevant-job:
+  docker-build-mwe:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -18,7 +18,7 @@ jobs:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4  
       - name: Make the script files executable
-        run: chmod +x run.sh
+        run: chmod +x build_and_run_mwe.sh
       - name: Run the scripts
         run: |
-          ./run.sh          
+          ./build_and_run_mwe.sh          
