@@ -1,0 +1,16 @@
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - name: setup-docker
+        uses: docker-practice/actions-setup-docker@v1            
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4  
+      - name: Make the script files executable
+        run: chmod +x run.sh
+      - name: Run the scripts
+        run: |
+          ./run.sh          
