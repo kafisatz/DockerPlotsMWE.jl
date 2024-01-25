@@ -1,8 +1,7 @@
 on:
     push:
-      branches:
-        - master
-        - main
+      branches:        
+        - change_to_main_for_automatic_trigger_main
       tags: ['*']
     pull_request:
     workflow_dispatch:
